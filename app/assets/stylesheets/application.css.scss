@@ -107,6 +107,7 @@ h6 {
 
 	h5 {
 		text-align: left;
+		font-weight: bold;
 	}
 
 	&:hover {
@@ -119,6 +120,9 @@ h6 {
 	padding-bottom: 24px;
 	img {
 		width: 100%;
+	}
+	p {
+		color: $running-border;
 	}
 }
 
@@ -159,9 +163,10 @@ h6 {
 }
 
 .progress {
+	@include border-radius(0);
 	background-color: #eb7d3b;
-	margin-top: 22px;
-	margin-bottom: 13px;
+	margin-top: 25px;
+	margin-bottom: 0px;
 	opacity: 0.6;
 	.progress-bar {
 		background-color: $accepted-border;
