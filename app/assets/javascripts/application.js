@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular
+//= require angular.min
 //= require_tree .
 //= require bootstrap-sprockets
