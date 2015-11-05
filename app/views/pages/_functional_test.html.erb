@@ -5,7 +5,7 @@
 	</canvas> 
 	<div class="row">
 		<div class="col-xs-6">
-			<h3>{{ ((item.functional_test.tests_data[1] / item.functional_test.tests_data[0]) * 100 | number:0) || 0 }}%</h3>
+			<h3>{{ (100 - (item.functional_test.tests_data[1] / item.functional_test.tests_data[0]) * 100 | number:0) || 0 }}%</h3>
 			<h6>tests passed</h6>
 		</div>
 		<div class="col-xs-6">
