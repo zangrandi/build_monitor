@@ -2,7 +2,7 @@
 <div ng-if="item.state == 'accepted'">
 	<h5>Change {{ item.state | capitalize }}</h5>
 	<h3>{{ item.details }}</h3>
-	<%= link_to "Merged build", '#', class: "btn btn-primary" %>
+	<%= link_to "<span class=\"glyphicon glyphicon-search\"></span> Merged build".html_safe, '#', class: "btn btn-primary" %>
 </div>
 
 <div ng-if="item.state == 'rejected' || item.state == 'fail' ">

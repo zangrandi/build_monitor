@@ -129,6 +129,7 @@
     "owner": "samy",
     "time_started": "4/16/2014 6:43am",
     "state": "accepted",
+    "details": "Auto Merged",
     "metrics": { 
       "state": "accepted",
       "test": 64,
