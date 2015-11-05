@@ -8881,7 +8881,7 @@ v-pane-content {
 /* line 97, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 h6 {
   color: black;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* line 102, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
@@ -8905,8 +8905,8 @@ h6 {
 
 /* line 118, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 #debug {
-  padding-top: 32px;
-  padding-bottom: 31px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 /* line 121, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 #debug img {
@@ -8926,32 +8926,31 @@ h6 {
 /* line 135, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 #metrics h6 {
   padding-top: 17px;
-  font-size: 10px;
   word-wrap: break-word;
 }
 
-/* line 142, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
+/* line 141, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 .btn-default {
   border: 2px solid #5e9cd3;
 }
 
-/* line 146, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
+/* line 145, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 .dropdown-menu {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 150, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
+/* line 149, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 .item-xs {
   margin: 0;
 }
 
-/* line 154, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
+/* line 153, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 .item-md {
   margin-top: 8px;
 }
-/* line 156, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
+/* line 155, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/application.css.scss */
 .item-md .icon {
   position: absolute;
   margin-left: 5px;
@@ -9006,27 +9005,32 @@ h6 {
   .item-details {
     height: 228px;
   }
+
+  /* line 11, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
+  .chart-container {
+    padding-top: 8px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 14, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
+  /* line 17, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
   .arrow {
     height: 124px;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  /* line 20, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
+  /* line 23, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
   #debug {
     padding-top: 44.5px;
     padding-bottom: 44.5px;
   }
 
-  /* line 24, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
+  /* line 27, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
   .chart-container {
     padding-top: 19.5px;
     padding-bottom: 19.5px;
   }
 
-  /* line 28, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
+  /* line 31, /Users/Zangrandi/Documents/Projetos/github_projects/build_monitor/app/assets/stylesheets/medias.css.scss */
   .item-details {
     height: 240px;
   }
