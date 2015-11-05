@@ -1,4 +1,9 @@
 @media (max-width: 768px) {
+  #debug {
+    img {
+      width: 100px;
+    }
+  }
   .col-sm-5ths, .col-md-5ths {
     margin-bottom: 10px;
   }
@@ -15,7 +20,7 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   .arrow {
-    height: 124px;
+    height: 115px;
   }
 }
 
