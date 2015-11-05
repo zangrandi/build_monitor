@@ -13,5 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular.min
-//= require_tree .
+//= require Chart
+//= require angular-chart
+//= require v-accordion
+//= require_tree ./angular/controllers/
 //= require bootstrap-sprockets
