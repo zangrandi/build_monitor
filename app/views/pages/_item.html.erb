@@ -1,6 +1,6 @@
 <div class="row hidden-xs item-md">
 	<div class="col-sm-1 text-left">
-		<%= image_tag "/assets/{{ item.type }}_{{ item.state }}.png", class: "icon" %>
+		<%= image_tag "/images/{{ item.type }}_{{ item.state }}.png", class: "icon" %>
 	</div>
 	<div class="col-sm-2 text-left">
 		{{ item.changelist }}
@@ -32,7 +32,7 @@
 
 <div class="row item visible-xs text-left">
 	<div class="col-xs-12 text-center">
-		<%= image_tag "build_pending.png" %>
+		<%= image_tag "/images/{{ item.type }}_{{ item.state }}.png", class: "icon" %>
 	</div>
 	<div class="col-xs-6">
 		Changelist / Build:
