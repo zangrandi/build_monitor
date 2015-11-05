@@ -5,13 +5,18 @@
     "changelist": "Tenrox-R1_1235",
     "owner": "",
     "time_started": "",
+    "metrics": { 
+      "state": "pending"
+    },
     "build": {
       "state": "pending"
     },
     "unit_test": {
+      "state": "pending",
       "tests_data": [0, 0]
     },
     "functional_test": {
+      "state": "pending",
       "tests_data": [0, 0]
     }
   },
