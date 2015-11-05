@@ -1,0 +1,138 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "compass";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$rejected-border: #b80000;
+$rejected-bg: #fdecec;
+$accepted-border: #548039;
+$accepted-bg: #f0f4ee;
+$running-border: #5e9cd3;
+$running-bg: #f1f4f9;
+$pending-border: #b6b6b6;
+$pending-bg: #f9f9f9;
+
+@mixin item($border-color, $background-color) {
+  border: 2px solid $border-color;
+  background-color: $background-color;
+	padding: 5px;
+	color: $border-color;
+
+
+}
+
+@mixin block($background-color) {
+	border: 2px solid #cacccc;
+	height: 20px;
+	width: 30px;
+	background-color: $background-color;
+	margin: auto;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.rejected {
+	@include item($rejected-border, $rejected-bg);
+}
+
+.failed {
+	@include item($rejected-border, $rejected-bg);
+}
+
+.accepted {
+	@include item($accepted-border, $accepted-bg);
+}
+
+.complete {
+	@include item($accepted-border, $accepted-bg);
+}
+
+.running {
+	@include item($running-border, $running-bg);	
+}
+
+.pending {
+	@include item($pending-border, $pending-bg);		
+}
+
+.block-rejected {
+	@include block($rejected-border);
+}
+
+.block-accepted {
+	@include block($accepted-border);	
+}
+
+.block-running {
+	@include block($running-border);	
+}
+
+.block-pending {
+	@include block($pending-border);		
+}
+
+v-pane-content {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.btn {
+	@include border-radius(0);
+	border: 2px solid #cacccc;
+}
+
+h6 {
+	color: black;
+	font-size: 11px;
+}
+
+.item-details {
+	h5 {
+		text-align: left;
+	}
+	padding: 0 10px 0 10px;
+	margin-bottom: 10px;
+}
+
+#debug {
+	padding-top: 32px;
+	padding-bottom: 31px;
+	img {
+		width: 100%;
+	}
+}
+
+#metrics {
+	.row {
+		margin-bottom: 5px;
+	}
+	h4 {
+		margin-top: -36px;
+		font-size: 18px;
+		color: white;
+	}
+	h6 {
+		padding-top: 17px;
+		font-size: 10px;
+		word-wrap: break-word;
+	}
+}

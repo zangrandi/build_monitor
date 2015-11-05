@@ -1,0 +1,77 @@
+<div class="row hidden-xs {{ item.state }}">
+	<div class="col-sm-2">
+		<%= image_tag "build_pending.png" %> {{ item.changelist }}
+	</div>
+	<div class="col-sm-2">
+		{{ item.owner }}
+	</div>
+	<div class="col-sm-2">
+		{{ item.time_started }}
+	</div>
+	<div class="col-sm-1">
+		{{ item.state }}
+	</div>
+	<div class="col-sm-1">
+		<div class="block-{{ item.metrics.state }} block block-{{ $index }}"></div>
+	</div>
+	<div class="col-sm-1">
+		<div class="block-{{ item.build }} block block-{{ $index }}"></div>
+	</div>
+	<div class="col-sm-1">
+		<div class="block-{{ item.unit_test.state }} block block-{{ $index }}"></div>
+	</div>
+	<div class="col-sm-2">
+		<div class="block-{{ item.functional_test.state }} block block-{{ $index }}"></div>
+	</div>
+</div>
+
+<div class="row visible-xs {{ item.state }}">
+	<div class="col-xs-6">
+		Changelist / Build
+	</div>
+	<div class="col-xs-6">
+		<%= image_tag "build_pending.png" %> {{ item.changelist }}
+	</div>
+	<div class="col-xs-6">
+		Owner
+	</div>
+	<div class="col-xs-6">
+		{{ item.owner }}
+	</div>
+	<div class="col-xs-6">
+		Time Started
+	</div>
+	<div class="col-xs-6">
+		{{ item.time_started }}
+	</div>
+	<div class="col-xs-6">
+		State
+	</div>
+	<div class="col-xs-6">
+		{{ item.state }}
+	</div>
+	<div class="col-xs-6">
+		Metrics
+	</div>
+	<div class="col-xs-6">
+		<div class="block-{{ item.metrics.state }}"></div>
+	</div>
+	<div class="col-xs-6">
+		Build
+	</div>
+	<div class="col-xs-6">
+		<div class="block-{{ item.build }}"></div>
+	</div>
+	<div class="col-xs-6">
+		Unit Test
+	</div>
+	<div class="col-xs-6">
+		<div class="block-{{ item.unit_test.state }}"></div>
+	</div>
+	<div class="col-xs-6">
+		Functional Test
+	</div>
+	<div class="col-xs-6">
+		<div class="block-{{ item.functional_test.state }}"></div>
+	</div>
+</div>

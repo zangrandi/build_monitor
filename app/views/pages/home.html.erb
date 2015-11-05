@@ -1,0 +1,54 @@
+<div ng-controller="BuildController" class="container" id="build-monitor">
+	<div class="row hidden-xs">
+		<div class="col-sm-2">
+			Changelist / Build
+		</div>
+		<div class="col-sm-2">
+		  Owner
+		</div>
+		<div class="col-sm-2">
+			Time Started
+		</div>
+		<div class="col-sm-1">
+			State
+		</div>
+		<div class="col-sm-1">
+			Metrics
+		</div>
+		<div class="col-sm-1">
+			Build
+		</div>
+		<div class="col-sm-1">
+			Unit Test
+		</div>
+		<div class="col-sm-2">
+			Functional Test
+		</div>
+	</div>
+
+	<v-accordion class="vAccordion--default">
+	  <v-pane ng-repeat="item in items">
+	    <v-pane-header ng-click="hideBlocks($index)">
+	    	<%= render "item" %>
+	    </v-pane-header>
+
+	    <v-pane-content>
+	      <div class="col-md-5ths col-sm-6">
+	      	<%= render "metrics" %>
+				</div>
+				<div class="col-md-5ths col-sm-6">
+					<%= render "build" %>
+				</div>
+				<div class="col-md-5ths col-sm-6">
+					<%= render "unit_test" %>
+				</div>
+				<div class="col-md-5ths col-sm-6">
+					<%= render "functional_test" %>
+				</div>
+				<div class="col-md-5ths col-sm-12">
+					<%= render "result" %>
+				</div>
+	    </v-pane-content>
+	  </v-pane>
+	</v-accordion>	
+</div>

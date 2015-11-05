@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .col-sm-5ths, .col-md-5ths {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+	.item-details {
+  	height: 228px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .arrow {
+    height: 122px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	#debug {
+		padding-top: 44.5px;
+		padding-bottom: 44.5px;
+	}
+  .chart-container {
+  	padding-top: 19.5px;
+  	padding-bottom: 19.5px;
+  }
+}

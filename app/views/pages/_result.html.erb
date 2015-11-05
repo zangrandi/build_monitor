@@ -1,0 +1,23 @@
+<h5>Result:</h5>
+<div ng-if="item.state == 'accepted'">
+	<h5>Change {{ item.state }}</h5>
+	<h3>{{ item.details }}</h3>
+	<%= link_to "Merged build", '#', class: "btn btn-primary" %>
+</div>
+
+<div ng-if="item.state == 'rejected'">
+	<h5>Change {{ item.state }}</h5>
+	<h3>{{ item.details }}</h3>
+	<%= link_to "Find issues", '#', class: "btn btn-primary" %>
+</div>
+
+<div ng-if="item.state == 'complete'">
+	<h3>{{ item.state }}</h3>
+	<%= link_to "Deploy", '#', class: "btn btn-primary" %>
+</div>
+
+<div ng-if="item.state == 'fail'">
+	<h5>Change {{ item.state }}</h5>
+	<h3>{{ item.details }}</h3>
+	<%= link_to "Find issues", '#', class: "btn btn-primary" %>
+</div>
