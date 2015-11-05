@@ -32,8 +32,7 @@ $pending-bg: #f9f9f9;
   background-color: $background-color;
 	padding: 5px;
 	color: $border-color;
-
-
+	margin-bottom: 10px;
 }
 
 @mixin block($background-color) {
@@ -50,19 +49,11 @@ body {
 	text-align: center;
 }
 
-.rejected {
+.rejected, .failed {
 	@include item($rejected-border, $rejected-bg);
 }
 
-.failed {
-	@include item($rejected-border, $rejected-bg);
-}
-
-.accepted {
-	@include item($accepted-border, $accepted-bg);
-}
-
-.complete {
+.accepted, .complete {
 	@include item($accepted-border, $accepted-bg);
 }
 
@@ -74,11 +65,11 @@ body {
 	@include item($pending-border, $pending-bg);		
 }
 
-.block-rejected {
+.block-rejected, .block-failed {
 	@include block($rejected-border);
 }
 
-.block-accepted {
+.block-accepted, .block-complete {
 	@include block($accepted-border);	
 }
 
@@ -90,14 +81,16 @@ body {
 	@include block($pending-border);		
 }
 
+
 v-pane-content {
-	padding-top: 5px;
+	padding-top: 15px;
 	padding-bottom: 5px;
+	margin-top: -10px;
 }
 
 .btn {
 	@include border-radius(0);
-	border: 2px solid #cacccc;
+	border: 2px solid $pending-border;
 }
 
 h6 {
@@ -106,11 +99,19 @@ h6 {
 }
 
 .item-details {
+	@include box-shadow(2px 2px 6px 0px rgba(0,0,0,0.70));
+	cursor: pointer;
+	padding: 0 10px 0 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+
 	h5 {
 		text-align: left;
 	}
-	padding: 0 10px 0 10px;
-	margin-bottom: 10px;
+
+	&:hover {
+		@include box-shadow(2px 2px 6px 0px rgba(0,0,0,1));
+	}
 }
 
 #debug {
@@ -134,5 +135,26 @@ h6 {
 		padding-top: 17px;
 		font-size: 10px;
 		word-wrap: break-word;
+	}
+}
+
+.btn-default {
+	border: 2px solid $running-border;	
+}
+
+.dropdown-menu {
+	@include border-radius(0);		
+}
+
+.item-xs {
+  margin: 0;
+}
+
+.item-md {
+	margin-top: 8px;
+	.icon {
+		position: absolute;
+		margin-left: 5px;
+		margin-top: -3px;
 	}
 }

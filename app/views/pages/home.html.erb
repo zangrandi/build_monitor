@@ -1,9 +1,11 @@
 <div ng-controller="BuildController" class="container" id="build-monitor">
 	<div class="row hidden-xs">
+		<div class="col-sm-1">
+		</div>
 		<div class="col-sm-2">
 			Changelist / Build
 		</div>
-		<div class="col-sm-2">
+		<div class="col-sm-1">
 		  Owner
 		</div>
 		<div class="col-sm-2">
@@ -27,12 +29,12 @@
 	</div>
 
 	<v-accordion class="vAccordion--default">
-	  <v-pane ng-repeat="item in items">
+	  <v-pane ng-repeat="item in items" class="{{ item.state }}">
 	    <v-pane-header ng-click="hideBlocks($index)">
 	    	<%= render "item" %>
 	    </v-pane-header>
 
-	    <v-pane-content>
+	    <v-pane-content class="pane-content">
 	      <div class="col-md-5ths col-sm-6">
 	      	<%= render "metrics" %>
 				</div>

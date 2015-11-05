@@ -1,4 +1,4 @@
-<div id="build" class="item-details {{ item.build }}">
+<div id="build" class="item-details {{ item.build.state }}">
 	<h5>Build</h5>
 	<div id="debug" class="row">
 		<div class="col-xs-6">
@@ -10,5 +10,5 @@
 			<p>Release</p>
 		</div>
 	</div>
-	<h6>{{ item.time_started }}</h6>
+	<h6>{{ item.time_started || "--" }}</h6>
 </div>

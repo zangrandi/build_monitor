@@ -1,15 +1,15 @@
-<div id="unit-test" class="item-details {{ item.unit_test.state }}">
+<div id="unit-test" class="item-details {{ item.unit_test.state || 'pending' }}">
 	<h5>Unit Test</h5>
 	<canvas id="pie" class="chart chart-pie"
 	  chart-data="item.unit_test.tests_data" chart-labels="pie_labels" chart-colours="pie_colours">
 	</canvas> 
 	<div class="row">
 		<div class="col-xs-6">
-			<h3>{{ (item.unit_test.tests_data[1] / item.unit_test.tests_data[0]) * 100 | number:0 }}%</h3>
+			<h3>{{ ((item.unit_test.tests_data[1] / item.unit_test.tests_data[0]) * 100 | number:0) || 0 }}%</h3>
 			<h6>tests passed</h6>
 		</div>
 		<div class="col-xs-6">
-			<h3>{{ item.unit_test.code_covered }}%</h3>
+			<h3>{{ item.unit_test.code_covered || 0 }}%</h3>
 			<h6>code coverage</h6>
 		</div>
 	</div>

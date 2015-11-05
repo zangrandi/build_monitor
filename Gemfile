@@ -13,7 +13,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 gem 'bootstrap-sass', '~> 3.3.5'
-gem "non-digest-assets", github: "zangrandi/non-digest-assets", branch: "master"
+
+gem 'pry', '~> 0.9.11'
+gem 'pry-rails', '~> 0.2.2'
+gem 'pry-remote', '~> 0.1'
+gem 'pry-nav', '~> 0.2'
 
 group :development, :test do
   gem 'byebug'

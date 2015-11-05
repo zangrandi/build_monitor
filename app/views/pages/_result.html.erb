@@ -1,23 +1,30 @@
 <h5>Result:</h5>
 <div ng-if="item.state == 'accepted'">
-	<h5>Change {{ item.state }}</h5>
+	<h5>Change {{ item.state | capitalize }}</h5>
 	<h3>{{ item.details }}</h3>
 	<%= link_to "Merged build", '#', class: "btn btn-primary" %>
 </div>
 
-<div ng-if="item.state == 'rejected'">
-	<h5>Change {{ item.state }}</h5>
+<div ng-if="item.state == 'rejected' || item.state == 'fail' ">
+	<h5>Change {{ item.state | capitalize }}</h5>
 	<h3>{{ item.details }}</h3>
 	<%= link_to "Find issues", '#', class: "btn btn-primary" %>
 </div>
 
 <div ng-if="item.state == 'complete'">
-	<h3>{{ item.state }}</h3>
-	<%= link_to "Deploy", '#', class: "btn btn-primary" %>
+	<h3>{{ item.state | capitalize }}</h3>
+	<%= link_to "Deploy", '#', class: "btn btn-primary" %> to
+	<p>
+		<li class="dropdown btn btn-default">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Production <span class="glyphicon glyphicon-chevron-down"></span></a>
+		  <ul class="dropdown-menu dropdown-menu-right">
+	      <li><%= link_to "Production", '#' %></li>
+	      <li><%= link_to "Staging", '#' %></li>
+		  </ul>
+		</li>
+	</p>
 </div>
 
-<div ng-if="item.state == 'fail'">
-	<h5>Change {{ item.state }}</h5>
-	<h3>{{ item.details }}</h3>
-	<%= link_to "Find issues", '#', class: "btn btn-primary" %>
+<div ng-if="item.state == 'pending' || item.state == 'running'">
+	<h3>{{ item.state | capitalize }}</h3>
 </div>
